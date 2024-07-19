@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+    <link rel="stylesheet" href="css/styles.css">
+     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+<!--        <link rel="stylesheet" href="css/media-queries.css">-->
+    <style>
+                 @media only screen and (min-width:320px)and (max-width: 480px) {
+                .container{
+                    width: 480px;
+                }
+        .container .desktop{
+            display: none;
+        }
+        .container .mobile-view{
+            display: flex;
+            
+        }
+        .container .mobile-view .top-bar{
+            width: 480px;
+/*            height: 60px;*/
+            
+        }
+  body {
+    background-color: lightblue;
+      overflow-x: hidden;
+  }
+}
+/*
+    @media only screen and (max-width: 600px) {
+        .container .desktop{
+            display: none;
+        }
+        .container .mobile-view{
+            display: flex;
+        }
+        .container .mobile-view .top-bar{
+            width: 600px;
+        }
+  body {
+    background-color: lightblue;
+      overflow-x: hidden;
+  }
+}
+*/
+       
+   
+    
+    </style>
+</head>
+<body>
+	<div class="container">
+    <div class="desktop">
+        
+        <div class="top-bar">
+        <h1>
+        Dashboard
+        
+        </h1>
+            <div class="admin-avatar">
+            
+            <img class="circle-image" src="image/will.jpg">
+            </div>
+        </div>
+        <div class="content">
+        <div class="left-panel">
+            <i class="fa fa-dashboard" style="font-size:48px;color:darkcyan;text-align: center; margin-left: 40px;"></i>
+           <ul>
+            
+               <li>
+    <div class="dropdown">
+        <h3><i class="fa fa-user" aria-hidden="true"></i>Users<i class="fa fa-caret-right" aria-hidden="true"></i></h3>
+                   <ul class="ul hidden">
+        
+        <li>Add User</li>
+        <li>User List</li>
+                       
+<!--        <li></li>-->
+        
+        </ul>
+                   
+                   </div>
+               </li>
+            
+             <li>
+    <div class="dropdown">
+        <h3><i class="fa fa-box"></i>Product<i class="fa fa-caret-right" aria-hidden="true"></i></h3>
+                   <ul class="ul hidden">
+        
+        <li><i class="fa fa-product-hunt" aria-hidden="true"></i>Add Product</li>
+        <li><i class="fa fa-product-hunt" aria-hidden="true"></i>Product List</li>
+                       
+<!--        <li></li>-->
+        
+        </ul>
+                   
+                   </div>
+               </li>
+                <li>
+    <div class="dropdown">
+        <h3>Order<i class="fa fa-caret-right" aria-hidden="true"></i></h3>
+                   <ul class="ul hidden">
+        
+        <li>Order List</li>
+        <li>Supplied Orders</li>
+                       
+<!--        <li></li>-->
+        
+        </ul>
+                   
+                   </div>
+               </li>
+                <li>
+    <div class="dropdown">
+        <h3>Settings
+            <i class="fa fa-caret-right" aria-hidden="true"></i>
+        
+        </h3>
+                   <ul class="ul hidden">
+        
+        <li>
+            <a href="">
+            
+            Upload Admin Photo
+            
+            </a>
+                       </li>
+        <li>
+                       <a href="">
+            
+            Add New Admin
+            
+            </a>
+                       </li>
+                       
+        <li>
+                       <a href="">
+            
+            Logout
+            
+            </a>
+                       </li>
+        
+        </ul>
+                   
+                   </div>
+               </li>
+            
+            </ul>
+            </div>
+            <div class="right-panel">
+                        <?php 
+if(isset($_GET['url'])){
+$url=$_GET['url'];
+require $url.".php";
+}
+
+
+?>
+          
+            </div>
+        </div>
+        </div>
+    
+<div class="mobile-view">
+    
+     <div class="top-bar">
+         
+         <div class="right" style="color: white;">
+             Menu<br>
+         <span class="dot ">
+             
+             <i class="fa fa-bars" aria-hidden="true" style="color: white; font-size: 30px;">
+                         </i>
+             
+             </span>
+             <div class="mobile-menu hidden">
+             <ul>
+                 
+                 <li>
+    <div class="mobile-dropdown">
+                     <h3>Users
+                         <i class="fa fa-caret-right" aria-hidden="true" style="color: white">
+                         </i>
+        
+        
+        </h3>
+                     <ul class="ul hidden">
+        
+        <li>
+            <a class="" href="">
+            Add User 
+            </a> 
+                            
+                            
+                            </li>
+                         <li>
+            <a class="" href="">
+            User List 
+            </a> 
+                            
+                            
+                            </li>
+                         
+        </ul>
+                     </div>
+                 
+                 </li>
+                  <li>
+    <div class="mobile-dropdown">
+                     
+            <h3>Product <i class="fa fa-caret-right" aria-hidden="true" style="color: white">
+                         </i></h3>
+        <ul class="ul hidden">
+        <li>
+                         <a class="" href="">
+            Add Product 
+            </a> 
+                            
+                            
+                            </li>
+             <li>
+        <a class="" href="">
+            Product List 
+            </a> 
+                            
+                            
+                            </li>
+        
+        
+        </ul>
+                     </div>
+                 
+                 </li>
+                  <li>
+    <div class="mobile-dropdown">
+                     <h3>Orders 
+<i class="fa fa-caret-right" aria-hidden="true" style="color: white">
+                         </i>
+        
+        
+        </h3>
+        <ul class="ul hidden">
+        
+                      <li>
+                         <a class="" href="">
+            Oders 
+            </a> 
+                            
+                            
+                            </li>
+             <li>
+                         <a class="" href="">
+            Oder List
+            </a> 
+                            
+                            
+                            </li>
+        </ul>
+                     </div>
+                 
+                 </li>
+                  <li>
+    <div class="mobile-dropdown">
+                     
+                     <h3>Settings <i class="fa fa-caret-right" aria-hidden="true" style="color: white">
+                         </i></h3>
+        <ul class="ul hidden">
+        
+        <li>
+        <a href="">
+            Upload  Admin Pic
+            </a>
+        
+        </li>
+            <li>
+             <a href="">
+            System Name Setting
+            </a>
+            
+            </li>
+            <li>
+             <a href="">
+            Logout
+            </a>
+            
+            </li>
+        </ul>
+                     </div>
+                 
+                 </li>
+                 
+                 </ul>
+             
+             </div>
+             
+         </div>
+        
+         <h1>Dashboard</h1>
+         <br>
+    </div>
+         <div class="right-chanel">
+        <?php 
+if(isset($_GET['url'])){
+$url=$_GET['url'];
+require $url.".php";
+}
+
+
+?>
+         </div>
+        </div>
+    </div>
+    
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
