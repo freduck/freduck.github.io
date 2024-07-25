@@ -8,6 +8,143 @@
      <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 <!--        <link rel="stylesheet" href="css/media-queries.css">-->
     <style>
+	    *{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+}
+.container .desktop .top-bar{
+    padding: 50px;
+    height: 160px;
+    background-color: darkcyan;
+    box-shadow: rgba(99,99,99,.5)2px 3px 80px 2px;
+    display: flex;
+    margin-bottom: 30px;
+}
+.container .desktop .top-bar h1{
+    padding: 10px;
+    color: white;
+}
+.container .mobile-view{
+    display: none;
+    
+}
+.container .mobile-view .top-bar{
+    padding: 50px;
+    height: 160px;
+    background-color: darkcyan;
+    box-shadow: rgba(99,99,99,.5)2px 3px 80px 2px;
+    margin-bottom: 30px;
+}
+.container .mobile-view .top-bar h1{
+    padding: 10px;
+    color: white;
+}
+.hidden{
+    
+    display: none;
+}
+.container .desktop .content{
+    display: grid;
+    grid-template-columns: 200px 1000px;
+    grid-column-gap: 50px;
+}
+.left-panel{
+    border: 1px solid whitesmoke;
+    padding: 20px;
+    box-shadow: 2px 3px 4px 2px rgba(99,99,99,.5);
+    
+    overflow: auto;
+    height: 600px
+}
+.dropdown{
+    padding: 10px;
+    border: 1px solid whitesmoke;
+    width: 170px;
+}
+.dropdown h3{
+    cursor: pointer;
+    font-size: 15px;
+    padding: 10px;
+    border-bottom: 1px solid darkcyan;
+}
+.dropdown .ul{
+    width: 160px;
+}
+li{
+    list-style-type: none;
+    padding: 5px;
+}
+.ul li a{
+    color: white;
+}
+a{
+    display: inline-block;
+    text-decoration: none;
+}
+.ul li{
+    padding: 10px;
+    margin: 5px;
+    background-color: darkcyan;
+    color: white;
+    
+}
+i{
+    color: darkcyan;
+    margin-left: 5px
+}
+.right-panel{
+    padding: 50px;
+    width: 1000px
+        border:1px solid whitesmoke;
+    box-shadow: rgba(99,99,99,.5)2px 3px 80px 2px;
+}
+.mobile-view .top-bar{
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 10px;
+}
+.mobile-view .top-bar .right{
+/*    float: right;*/
+    margin-left: 60px;
+    margin-top: 20px;
+}
+.mobile-view .top-bar .righ .dot span{
+    width: 30px;
+    border-bottom-color: white;
+    height: 3px;
+    color: white;
+    display: block;
+    cursor: pointer;
+}
+.mobile-menu{
+    background-color: darkcyan;
+    width: 200px;
+    padding: 30px;
+    margin: 50px 0 0 0; 
+    position: relative;
+}
+.ul li{
+    border-bottom: 2px solid white;
+}
+i{
+    cursor: pointer;
+}
+.admin-avatar{
+    float: right;
+    padding: 10px''
+}
+.container .desktop .top-bar .admin-avatar .circle-image{
+    width: 80px;
+    border-radius: 50px;
+    width: 80px;
+    height: 100px;
+    float: right;
+    margin-left: 800px
+}
 /*
                  @media only screen and (min-width:320px)and (max-width: 480px) {
                 .container{
